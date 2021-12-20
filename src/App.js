@@ -20,7 +20,7 @@ function App() {
       </select>
       <hr />
       {index === "0" ? <ToDoList /> : null}
-      <CoinTracker />
+      {index === "1" ? <CoinTracker /> : null}
     </div>
   );
 }
