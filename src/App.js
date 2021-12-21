@@ -1,6 +1,7 @@
 import { useState } from "react";
-import ToDoList from "./ToDoList";
-import CoinTracker from "./CoinTracker";
+import ToDoList from "./components/ToDoList";
+import CoinTracker from "./components/CoinTracker";
+import MovieApp from "./components/MovieApp";
 
 function App() {
   const [index, setIndex] = useState("default");
@@ -21,6 +22,7 @@ function App() {
       <hr />
       {index === "0" ? <ToDoList /> : null}
       {index === "1" ? <CoinTracker /> : null}
+      <MovieApp />
     </div>
   );
 }
