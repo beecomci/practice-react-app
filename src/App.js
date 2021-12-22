@@ -22,7 +22,7 @@ function App() {
       <hr />
       {index === "0" ? <ToDoList /> : null}
       {index === "1" ? <CoinTracker /> : null}
-      <MovieApp />
+      {index === "2" ? <MovieApp /> : null}
     </div>
   );
 }
