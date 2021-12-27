@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Nav from "./components/Nav";
-import ToDoList from "./components/ToDoList";
-import CoinTracker from "./components/CoinTracker";
-import MovieApp from "./components/MovieApp";
-import Home from "./components/Home";
+import Nav from "./components/Nav/Nav";
+import ToDoList from "./routes/TodoList/ToDoList";
+import CoinTracker from "./routes/CoinTracker/CoinTracker";
+import Home from "./routes/Home/Home";
+import MovieApp from "./routes/Movie/MovieApp";
+import MovieDetail from "./routes/Movie/MovieDetail";
 import styles from "./App.module.css";
 
 function App() {
@@ -17,18 +18,17 @@ function App() {
           </div>
           <div className={styles.contents_area}>
             <Switch>
-              <Route path="/todolist">
-                <ToDoList />
-              </Route>
-              <Route path="/cointracker">
-                <CoinTracker />
-              </Route>
-              <Route path="/movieapp">
-                <MovieApp />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
+              <Route exact path="/practice-react-app" component={Home} />
+              <Route path="/practice-react-app/todolist" component={ToDoList} />
+              <Route
+                path="/practice-react-app/cointracker"
+                component={CoinTracker}
+              />
+              <Route
+                path="/practice-react-app/movieapp/:id"
+                component={MovieDetail}
+              />
+              <Route path="/practice-react-app/movieapp" component={MovieApp} />
             </Switch>
           </div>
         </div>

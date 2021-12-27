@@ -8,7 +8,7 @@ function Movie({ id, coverImg, title, summary, genres }) {
       <img src={coverImg} alt={title} className={styles.img} />
       <div className={styles.info}>
         <h3 className={styles.title}>
-          <Link to={`/movieapp/${id}`}>{title}</Link>
+          <Link to={`/practice-react-app/movieapp/${id}`}>{title}</Link>
         </h3>
         <p className={styles.summary}>
           {summary.length > 235 ? `${summary.slice(0, 235)}...` : summary}

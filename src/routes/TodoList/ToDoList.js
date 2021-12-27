@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Title from "./Title";
+import Title from "../../components/Title/Title";
 import styles from "./TodoList.module.css";
 
 function ToDoList() {
@@ -29,9 +29,7 @@ function ToDoList() {
           type="text"
           placeholder="Write your to do..."
         />
-        <button type="button" className={styles.btn_add}>
-          Add To Do
-        </button>
+        <button className={styles.btn_add}>Add To Do</button>
       </form>
       <hr />
       <ul>

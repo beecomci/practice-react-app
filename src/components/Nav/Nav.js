@@ -5,16 +5,16 @@ function Nav() {
   return (
     <ul className={styles.menu_area}>
       <li className={styles.item}>
-        <Link to="/">Home</Link>
+        <Link to="/practice-react-app">Home</Link>
       </li>
       <li className={styles.item}>
-        <Link to="/todolist">Todo List</Link>
+        <Link to="/practice-react-app/todolist">Todo List</Link>
       </li>
       <li className={styles.item}>
-        <Link to="/cointracker">Coin Tracker</Link>
+        <Link to="/practice-react-app/cointracker">Coin Tracker</Link>
       </li>
       <li className={styles.item}>
-        <Link to="/movieapp">Movie App</Link>
+        <Link to="/practice-react-app/movieapp">Movie App</Link>
       </li>
     </ul>
   );

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Title from "./Title";
-import Loading from "./Loading";
+import Title from "../../components/Title/Title";
+import Loading from "../../components/Loading/Loading";
 
 function CoinTracker() {
   const [loading, setLoading] = useState(true);
