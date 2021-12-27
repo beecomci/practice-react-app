@@ -6,10 +6,10 @@ function MovieApp() {
   return (
     <Router>
       <Switch>
-        <Route path="/movie/:id">
+        <Route path="/movieapp/:id">
           <Detail />
         </Route>
-        <Route path="/">
+        <Route path="/movieapp">
           <Home />
         </Route>
       </Switch>

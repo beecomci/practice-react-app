@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Title from "./Title";
+import styles from "./TodoList.module.css";
 
 function ToDoList() {
   const [toDo, setToDo] = useState("");
@@ -18,21 +20,24 @@ function ToDoList() {
 
   return (
     <div>
-      <h2>My ToDos ({toDos.length})</h2>
+      <Title text={`My ToDos (${toDos.length})`} />
       <form onSubmit={onSubmit}>
         <input
+          className={styles.input_todo}
           value={toDo}
           onChange={onChange}
           type="text"
           placeholder="Write your to do..."
         />
-        <button>Add To Do</button>
+        <button type="button" className={styles.btn_add}>
+          Add To Do
+        </button>
       </form>
       <hr />
       <ul>
         {/* react element로 된 array 반환 */}
         {toDos.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>✓ {item}</li>
         ))}
       </ul>
     </div>
