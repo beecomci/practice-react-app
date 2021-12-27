@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Title from "../../components/Title/Title";
-import styles from "./TodoList.module.css";
+import styles from "./TodoList.module.scss";
 
 function ToDoList() {
   const [toDo, setToDo] = useState("");

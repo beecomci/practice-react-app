@@ -1,0 +1,27 @@
+.item {
+  overflow: hidden;
+  max-width: 1000px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+
+  .img {
+    float: left;
+    width: 230px;
+  }
+
+  .info {
+    margin-left: 260px;
+
+    .title,
+    .summary,
+    .rating {
+      margin-bottom: 10px;
+    }
+
+    .rating {
+      display: block;
+    }
+  }
+}

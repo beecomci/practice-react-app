@@ -1,0 +1,18 @@
+.menu_area {
+  overflow: hidden;
+  position: relative;
+  padding: 2px 20px;
+  border-radius: 10px;
+  background-color: #eecdc8;
+}
+
+.item {
+  a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 15px;
+    line-height: 47px;
+  }
+}

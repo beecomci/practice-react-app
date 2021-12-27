@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Loading from "../../components/Loading/Loading";
 import Title from "../../components/Title/Title";
-import styles from "../../components/Movie/Movie.module.css";
+import styles from "../../components/Movie/Movie.module.scss";
 
 function Detail() {
   const { id } = useParams();

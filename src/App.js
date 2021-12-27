@@ -5,7 +5,7 @@ import CoinTracker from "./routes/CoinTracker/CoinTracker";
 import Home from "./routes/Home/Home";
 import MovieApp from "./routes/Movie/MovieApp";
 import MovieDetail from "./routes/Movie/MovieDetail";
-import styles from "./App.module.css";
+import styles from "./App.module.scss";
 
 function App() {
   return (
