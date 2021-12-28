@@ -12,24 +12,18 @@ function App() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Practice React App</h1>
-      <Router>
+      <Router basename="/practice-react-app">
         <div className={styles.wrap}>
           <div className={styles.nav_area}>
             <Nav />
           </div>
           <div className={styles.contents_area}>
             <Switch>
-              <Route exact path="/practice-react-app" component={Home} />
-              <Route path="/practice-react-app/todolist" component={ToDoList} />
-              <Route
-                path="/practice-react-app/cointracker"
-                component={CoinTracker}
-              />
-              <Route
-                path="/practice-react-app/movieapp/:id"
-                component={MovieDetail}
-              />
-              <Route path="/practice-react-app/movieapp" component={MovieApp} />
+              <Route exact path="/" component={Home} />
+              <Route path="/todolist" component={ToDoList} />
+              <Route path="/cointracker" component={CoinTracker} />
+              <Route path="/movieapp/:id" component={MovieDetail} />
+              <Route path="/movieapp" component={MovieApp} />
               <Route path="/*" component={NotFound} />
             </Switch>
           </div>
