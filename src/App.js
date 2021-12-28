@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
+import NotFound from "./components/NotFound/NotFound";
 import ToDoList from "./routes/TodoList/ToDoList";
 import CoinTracker from "./routes/CoinTracker/CoinTracker";
 import Home from "./routes/Home/Home";
@@ -29,6 +30,7 @@ function App() {
                 component={MovieDetail}
               />
               <Route path="/practice-react-app/movieapp" component={MovieApp} />
+              <Route path="/*" component={NotFound} />
             </Switch>
           </div>
         </div>
