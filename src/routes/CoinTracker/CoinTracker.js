@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Title from "../../components/Title/Title";
+import Loading from "../../components/Loading/Loading";
 
 function CoinTracker() {
   const [loading, setLoading] = useState(true);
@@ -27,10 +29,10 @@ function CoinTracker() {
 
   return (
     <div>
-      <h2>Coin Tracker {loading ? "" : `(${coins.length})`}</h2>
+      <Title text={`Coin Tracker ${loading ? "" : "(" + coins.length + ")"}`} />
       <div>
         {loading ? (
-          <strong>Loading...</strong>
+          <Loading />
         ) : (
           <select onChange={onSelect}>
             <option value="default">Choose Coin</option>

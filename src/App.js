@@ -1,26 +1,34 @@
-import { useState } from "react";
-import ToDoList from "./ToDoList";
-import CoinTracker from "./CoinTracker";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Nav from "./components/Nav/Nav";
+import NotFound from "./components/NotFound/NotFound";
+import ToDoList from "./routes/TodoList/ToDoList";
+import CoinTracker from "./routes/CoinTracker/CoinTracker";
+import Home from "./routes/Home/Home";
+import MovieApp from "./routes/Movie/MovieApp";
+import MovieDetail from "./routes/Movie/MovieDetail";
+import styles from "./App.module.scss";
 
 function App() {
-  const [index, setIndex] = useState("default");
-
-  const onChange = event => {
-    setIndex(event.target.value);
-  };
-
   return (
-    <div>
-      <h1>Practice React App</h1>
-      <select value={index} onChange={onChange}>
-        <option value="default">Choose your app</option>
-        <option value="0">ToDoList</option>
-        <option value="1">Coin Tracker</option>
-        <option value="2">Movie App</option>
-      </select>
-      <hr />
-      {index === "0" ? <ToDoList /> : null}
-      {index === "1" ? <CoinTracker /> : null}
+    <div className={styles.container}>
+      <h1 className={styles.title}>Practice React App</h1>
+      <Router basename="/practice-react-app">
+        <div className={styles.wrap}>
+          <div className={styles.nav_area}>
+            <Nav />
+          </div>
+          <div className={styles.contents_area}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/todolist" component={ToDoList} />
+              <Route path="/cointracker" component={CoinTracker} />
+              <Route path="/movieapp/:id" component={MovieDetail} />
+              <Route path="/movieapp" component={MovieApp} />
+              <Route path="/*" component={NotFound} />
+            </Switch>
+          </div>
+        </div>
+      </Router>
     </div>
   );
 }
